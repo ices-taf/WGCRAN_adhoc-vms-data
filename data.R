@@ -3,7 +3,9 @@
 ## Before:
 ## After:
 
-library(TAF)
+library(icesTAF)
 
 mkdir("data")
 
+source("data_csquares.R")
+source("data_vms.R")
