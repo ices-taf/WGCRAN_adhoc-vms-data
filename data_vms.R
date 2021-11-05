@@ -5,15 +5,14 @@ library(dplyr)
 mkdir("data")
 
 # read vms
-vms_others <- read.taf(taf.data.path("vms", "vms.csv")) %>% tibble()
-vms_nld <- read.taf(taf.data.path("vms_nld", "vms_nld.csv")) %>% tibble()
+vms <- read.taf(taf.data.path("vms", "vms.csv")) %>% tibble()
 
 # get csquares for the eez areas
 csquares_eez <- st_read("data/csquare_eez.gpkg")
 
 # combine nld with the rest
 wgcran_vms <-
-  rbind(vms_others, vms_nld) %>%
+  vms %>%
   group_by(year, month, c_square) %>%
   summarise(
     fishingHours = sum(fishingHours, na.rm = TRUE),

@@ -14,7 +14,6 @@
 # These values are needed for one metier (TBB_CRU_16-31) for the years 2009 – 2018 and the geographical
 # scope is the Danish, German and Dutch EEZ’s.
 
-library(icesTAF)
 library(icesVMS)
 library(icesVocab)
 library(dplyr)
@@ -24,7 +23,7 @@ library(sf)
 vms_all <-
   get_vms(
     metier = c("TBB_CRU_16-31", "TBB_CRU_16-31_0_0"),
-    country = c("DNK", "DEU", "BEL"),
+    country = c("DK", "DE", "BE", "NL"),
     year = 0
   ) %>%
   tibble()
