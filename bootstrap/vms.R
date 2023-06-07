@@ -5,7 +5,7 @@
 #' @name vms
 #' @format csv file
 #' @tafOriginator ICES
-#' @tafYear 2020
+#' @tafYear 2022
 #' @tafAccess Restricted
 #' @tafSource script
 

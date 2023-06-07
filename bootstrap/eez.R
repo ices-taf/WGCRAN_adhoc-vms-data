@@ -5,14 +5,15 @@
 #' @name eez
 #' @format csv file
 #' @tafOriginator VLIZ
-#' @tafYear 2020
+#' @tafYear 2022
 #' @tafAccess Restricted
 #' @tafSource script
 
 library(icesTAF)
 library(dplyr)
 library(sf)
-
+# https://www.marineregions.org/download_file.php?name=World_EEZ_v11_20191118_gpkg.zip
+# Flanders Marine Institute (2019). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 11. Available online at https://www.marineregions.org/. https://doi.org/10.14284/386
 unzip(
   taf.boot.path("initial", "data", "World_EEZ_v11_20191118_gpkg.zip"),
   exdir = "temp"
