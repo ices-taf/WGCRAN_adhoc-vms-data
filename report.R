@@ -56,3 +56,13 @@ ggplot(
   geom_line() +
   ggtitle("C-squares fished by month and year")
 ggsave("csquares_fished_timeseries.png", path = "report", dpi = 900, width = 9, height = 9)
+
+# zip up for emailing
+files <-
+  c(
+    dir("output", pattern = "wgcran_vms[.]", full.names = TRUE),
+    dir("report", full.names = TRUE)
+  )
+
+mkdir("zip")
+zip("zip/wgcran_datacall_2022.zip", files)
